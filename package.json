@@ -1,0 +1,9 @@
+{
+  "name": "utils.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:iygxv/utils.js.git",
+  "author": "zwf <871772825@qq.com>",
+  "license": "MIT",
+  "type": "module"
+}
