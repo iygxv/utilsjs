@@ -12,9 +12,8 @@
 <body>
   <script src="../dist//index.global.js"></script>
   <script>
-    console.log(utils)
     const { Animation } = utils
-    const ani = new Animation(500)
+    const ani = new Animation()
     let i = 1
     ani.start(() => {
       i++
@@ -23,7 +22,7 @@
         ani.stop()
         console.log('停止了')
       }
-    })
+    }, 500)
   </script>
 </body>
 
