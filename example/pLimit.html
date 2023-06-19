@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="../dist/index.global.js"></script>
+  <script>
+    const fn = async () => {
+      const { pLimit } = utils
+      const limit = pLimit(2);
+      const sleep = (content, delay) => {
+        setTimeout(() => {
+          console.log(content)
+          return content
+        }, delay)
+      }
+      const input = [
+        limit(() => sleep('1', 1000)),
+        limit(() => sleep('2', 1000)),
+        limit(() => sleep('5', 5000))
+      ];
+      const result = await Promise.all(input);
+      console.log(result);
+    }
+    fn()
+  </script>
+</body>
+
+</html>
