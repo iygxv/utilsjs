@@ -16,10 +16,12 @@
       const { pLimit } = utils
       const limit = pLimit(2);
       const sleep = (content, delay) => {
-        setTimeout(() => {
-          console.log(content)
-          return content
+        return new Promise(resolve => {
+          setTimeout(() => {
+            console.log('等待了' + delay + '秒')
+          resolve()
         }, delay)
+        })
       }
       const input = [
         limit(() => sleep('1', 1000)),
@@ -28,6 +30,9 @@
       ];
       const result = await Promise.all(input);
       console.log(result);
+      // Promise.all(input).then(values => {
+      //   console.log(values)
+      // })
     }
     fn()
   </script>
