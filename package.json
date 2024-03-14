@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:iygxv/utils.js.git",
-  "author": "zwf <871772825@qq.com>",
+  "author": "sy <871772825@qq.com>",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "jest"
   },
   "dependencies": {
     "execa": "^7.1.1",
     "rollup": "^3.22.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
