@@ -1,21 +1,26 @@
 {
-  "name": "utils.js",
+  "name": "@tianyixuan/utilsjs",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:iygxv/utils.js.git",
-  "author": "sy <871772825@qq.com>",
+  "repository": "git@github.com:iygxv/utilsjs.git",
+  "author": "tianyixuan <871772825@qq.com>",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
-    "test": "jest"
+    "test": "vitest",
+    "test-ui": "vitest --ui"
   },
   "dependencies": {
     "execa": "^7.1.1",
     "rollup": "^3.22.0"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "babel-jest": "^29.7.0",
+    "vitest": "^2.0.5",
+    "@vitest/ui": "^2.0.5"
   }
 }
