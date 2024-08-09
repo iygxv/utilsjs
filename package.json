@@ -5,7 +5,6 @@
   "repository": "git@github.com:iygxv/utilsjs.git",
   "author": "tianyixuan <871772825@qq.com>",
   "license": "MIT",
-  "type": "module",
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",

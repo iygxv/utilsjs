@@ -1,13 +1,13 @@
 import filterJson from '../lib/filterJson.js';
 import {
   describe,
-  test,
+  it,
   expect
 } from 'vitest';
 
 
 describe('filterJson test', () =>{
-  test('filterJson should return an object containing only specified keys', () => {
+  it('filterJson should return an object containing only specified keys', () => {
     const json = {
       name: 'John',
       age: 30,
@@ -22,7 +22,7 @@ describe('filterJson test', () =>{
     });
   });
 
-  test('filterJson should handle empty keys array', () => {
+  it('filterJson should handle empty keys array', () => {
     const json = {
       name: 'John',
       age: 30,
@@ -34,7 +34,7 @@ describe('filterJson test', () =>{
     expect(result).toEqual({});
   });
 
-  test('filterJson should handle non-existent keys', () => {
+  it('filterJson should handle non-existent keys', () => {
     const json = {
       name: 'John',
       age: 30,
@@ -46,14 +46,14 @@ describe('filterJson test', () =>{
     expect(result).toEqual({});
   });
 
-  test('filterJson should handle null or undefined json', () => {
+  it('filterJson should handle null or undefined json', () => {
     const keys = ['name', 'age'];
 
     expect(() => filterJson(null, keys)).toThrow();
     expect(() => filterJson(undefined, keys)).toThrow();
   });
 
-  test('filterJson should handle non-array keys', () => {
+  it('filterJson should handle non-array keys', () => {
     const json = {
       name: 'John',
       age: 30,
@@ -64,7 +64,7 @@ describe('filterJson test', () =>{
     expect(() => filterJson(json, keys)).toThrow();
   });
 
-  test('filterJson should handle nested objects correctly (it should not filter nested keys)', () => {
+  it('filterJson should handle nested objects correctly (it should not filter nested keys)', () => {
     const json = {
       name: 'John',
       age: 30,
