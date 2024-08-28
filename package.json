@@ -1,6 +1,7 @@
 {
   "name": "@tianyixuan/utilsjs",
   "version": "1.0.0",
+  "description": "tianyixuan of utilsjs",
   "main": "index.js",
   "repository": "git@github.com:iygxv/utilsjs.git",
   "author": "tianyixuan <871772825@qq.com>",
